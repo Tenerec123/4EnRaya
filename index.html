@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conecta4</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1 id="Title">Conecta 3 + 1</h1>
+
+    <h2 id="Turn"></h2>
+
+    <button id="Restart" onclick="RestartGame()">Siguiente partida</button>
+    <div id="Score">
+        <div>
+            ROJO: <span id="RedSc">0</span>
+        </div>
+        <div>
+            AMARILLO: <span id="YellowSc">0</span>
+        </div>
+    </div>
+    <button onclick="ResScore()" class="sideBtns" id="ResScore">Reset<br>Score</button>
+    <button onclick="ResGame()" class="sideBtns" id="ResGame">Reset<br>Game</button>
+
+    <script src="script.js"></script>
+</body>
+</html>
