@@ -131,3 +131,43 @@ body{
     from{transform: translateY(-500%);}
 }
 
+/* Contenedor de botones */
+#ButtonContainer {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 10px 0;
+    width: 100%;
+}
+
+/* Botones para pantallas grandes: a los lados del tablero */
+@media (min-width: 768px) {
+    #ButtonContainer {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        right: 0;
+        width: auto;
+        justify-content: space-between;
+        padding: 0 20px;
+        margin: 0;
+        transform: translateY(-50%);
+    }
+    .sideBtns {
+        position: static;
+    }
+}
+
+/* Botones para pantallas pequeñas: debajo del marcador */
+@media (max-width: 767px) {
+    #ButtonContainer {
+        position: relative;
+        flex-direction: row;
+        justify-content: center;
+        margin-top: 10px;
+    }
+    .sideBtns {
+        position: static;
+    }
+}
+
