@@ -131,25 +131,62 @@ body{
     from{transform: translateY(-500%);}
 }
 
-#ScoreContainer {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    margin: 10px 0;
+/* Estilo base de botones */
+.sideBtns{
+    height: 50px;
+    background-color: hsl(0, 0%, 20%);
+    color: white;
+    border-radius: 10px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border: none;
+    transition: background-color .25s;
 }
 
-/* Botones y marcador centrados para pantallas pequeñas */
-@media (max-width: 600px) {
-    #ScoreContainer {
-        flex-direction: column;
-        gap: 5px;
+/* Hover */
+.sideBtns:hover{
+    background-color: rgb(56, 146, 221);
+}
+
+/* --- Pantallas grandes: botones a los lados del tablero --- */
+@media (min-width: 768px) {
+    #ResScore {
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    #ResGame {
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
     }
 }
-.sideBtns {
-    height: 50px;
-    padding: 5px 10px;
-    font-size: 1rem;
+
+/* --- Pantallas pequeñas: botones a los lados del Score --- */
+@media (max-width: 767px) {
+    #ResScore {
+        position: relative;
+        display: inline-block;
+        margin-right: 20px;
+    }
+    #ResGame {
+        position: relative;
+        display: inline-block;
+        margin-left: 20px;
+    }
+    
+    /* Centrar Score y botones horizontalmente */
+    #Score, #ResScore, #ResGame {
+        display: inline-block;
+        vertical-align: middle;
+    }
+    body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 }
 
 
