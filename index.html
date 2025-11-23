@@ -12,21 +12,23 @@
     <h2 id="Turn"></h2>
 
     <button id="Restart" onclick="RestartGame()">Siguiente partida</button>
-    <div id="Score">      
-        <div>
-            ROJO: <span id="RedSc">0</span>
+
+    <!-- Contenedor del contador y los botones para móvil -->
+    <div id="ScoreWrapper">
+        <button onclick="ResScore()" class="sideBtns" id="ResScore">Reset<br>Score</button>
+        <div id="Score">      
+            <div>
+                ROJO: <span id="RedSc">0</span>
+            </div>
+            <div>
+                AMARILLO: <span id="YellowSc">0</span>
+            </div>
         </div>
-        <div>
-            AMARILLO: <span id="YellowSc">0</span>
-        </div>
+        <button onclick="ResGame()" class="sideBtns" id="ResGame">Reset<br>Game</button>
     </div>
-    
-    <button onclick="ResScore()" class="sideBtns" id="ResScore">Reset<br>Score</button>
-    <button onclick="ResGame()" class="sideBtns" id="ResGame">Reset<br>Game</button>
-    
+
+    <div id="GameBoard"></div>
+
     <script src="script.js"></script>
 </body>
-
 </html>
-
-
