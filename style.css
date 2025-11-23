@@ -131,43 +131,26 @@ body{
     from{transform: translateY(-500%);}
 }
 
-/* Contenedor de botones */
-#ButtonContainer {
+#ScoreContainer {
     display: flex;
+    align-items: center;
     justify-content: center;
     gap: 10px;
     margin: 10px 0;
-    width: 100%;
 }
 
-/* Botones para pantallas grandes: a los lados del tablero */
-@media (min-width: 768px) {
-    #ButtonContainer {
-        position: absolute;
-        top: 50%;
-        left: 0;
-        right: 0;
-        width: auto;
-        justify-content: space-between;
-        padding: 0 20px;
-        margin: 0;
-        transform: translateY(-50%);
+/* Botones y marcador centrados para pantallas pequeñas */
+@media (max-width: 600px) {
+    #ScoreContainer {
+        flex-direction: column;
+        gap: 5px;
     }
-    .sideBtns {
-        position: static;
-    }
+}
+.sideBtns {
+    height: 50px;
+    padding: 5px 10px;
+    font-size: 1rem;
 }
 
-/* Botones para pantallas pequeñas: debajo del marcador */
-@media (max-width: 767px) {
-    #ButtonContainer {
-        position: relative;
-        flex-direction: row;
-        justify-content: center;
-        margin-top: 10px;
-    }
-    .sideBtns {
-        position: static;
-    }
-}
+
 
